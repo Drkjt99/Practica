@@ -71,6 +71,7 @@ public class GestorContactos {
 		System.out.println("Contacto ingresado exitosamente");
 	}
 
+
 	private static void eliminarContacto() {
 		System.out.println("Ingrese el telefono del contacto a borrar");
 		String tel = scan.next();
