@@ -23,7 +23,7 @@ public class GestorContactos {
 			opcion = scan.nextInt();
 			switch (opcion) {
 				case 1:
-					//crearContacto();
+					crearContacto();
 					break;
 				case 2:
 					//eliminarContacto();
@@ -43,7 +43,27 @@ public class GestorContactos {
 		} while(opcion != 0);
 	}
 
-	private static void crearContacto() {}
+	private static void crearContacto() {
+		Contacto contactos = new Contacto();
+
+		String nombre, apellido, fechaNacimiento, telefono;
+
+		System.out.println("Ingrese un nombre: ");
+		nombre = scan.next();
+		contactos.setNombre(nombre);
+
+		System.out.println("Ingrese un apellido: ");
+		apellido = scan.next();
+		contactos.setApellido(apellido);
+
+		System.out.println("Ingrese la fecha de nacimiento: ");
+		fechaNacimiento = scan.next();
+		contactos.setFechaNacimiento(fechaNacimiento);
+
+		System.out.println("Ingrese un numero de telefono valido: ");
+		telefono = scan.next();
+		contactos.setTelefono(telefono);
+	}
 
 	private static void eliminarContacto() {}
 
