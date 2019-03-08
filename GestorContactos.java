@@ -49,41 +49,11 @@ public class GestorContactos {
 	}
 
 	private static void crearContacto() {
-		Contacto contacto = new Contacto();
 
-		System.out.println("Ingrese el nombre");
-		String nombre = scan.nextLine();
-		contacto.setNombre(nombre);
-
-		System.out.println("Ingrese el apellido");
-		String apellido = scan.nextLine();
-		contacto.setApellido(apellido);
-
-		System.out.println("Ingrese la fecha de nacimiento");
-		String fechaNacimiento = scan.nextLine();
-		contacto.setFechaNacimiento(fechaNacimiento);
-
-		System.out.println("Ingrese el telefono");
-		String telefono = scan.nextLine();
-		contacto.setTelefono(telefono);
-
-		contactos.add(contacto);
-		System.out.println("Contacto ingresado exitosamente");
 	}
 
 	private static void eliminarContacto() {
-		System.out.println("Ingrese el telefono del contacto a borrar");
-		String tel = scan.next();
-		System.out.println("El tamaño antes era: "+contactos.size());
-		for(int i=0;i<contactos.size();i++) {
-			if(contactos.get(i).getTelefono().equals(tel)){
-			contactos.remove(i);
-			System.out.println("El tamaño ahora es: "+contactos.size());
-			}
-			else if(i==contactos.size()-1&&!contactos.get(i).getTelefono().equals(tel)){
-			System.out.println("NO se ha encontrado ningun usuario con ese numero");
-			}
-		}
+
 	}
 
 
@@ -96,8 +66,8 @@ public class GestorContactos {
 		System.out.println("Ingrese el nombre para filtrar");
 		String nom = scan.next();
 		for(int i=0;i<contactos.size();i++) {
-			if(contactos.get(i).getNombre().equalsIgnoreCase(nom)){
-				System.out.println(contactos.get(i));
+		  if(contactos.get(i).getNombre().equalsIgnoreCase(nom)){
+		    System.out.println(contactos.get(i));
 			}
 		}
 
