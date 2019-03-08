@@ -9,7 +9,7 @@ public class GestorContactos {
 		//Contactos dummy
 		contactos.add(new Contacto("Sarina", "Bolaños", "51130327"));
 		contactos.add(new Contacto("Esvin", "González", "51233905"));
-		contactos.add(new Contacto("Lenix", "González", "47331010"));
+		contactos.add(new Contacto("Esvin", "González", "47331010"));
 		contactos.add(new Contacto("Josué", "Lima", "43890987"));
 		contactos.add(new Contacto("Lester", "Segura", "51190327"));
 
@@ -37,7 +37,7 @@ public class GestorContactos {
 					mostrarTodos();
 					break;
 				case 4:
-					//mostrarFiltrados();
+					mostrarFiltrados();
 					break;
 				case 0:
 					System.out.println("\n\nBye ;)");
@@ -92,6 +92,15 @@ public class GestorContactos {
 		contactos.forEach(System.out::println);
 	}
 
-	private static void mostrarFiltrados() {}
+	private static void mostrarFiltrados() {
+		System.out.println("Ingrese el nombre para filtrar");
+		String nom = scan.next();
+		for(int i=0;i<contactos.size();i++) {
+			if(contactos.get(i).getNombre().equalsIgnoreCase(nom)){
+				System.out.println(contactos.get(i));
+			}
+		}
+
+	}
 
 }
