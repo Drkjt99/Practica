@@ -6,6 +6,13 @@ public class GestorContactos {
 	private static List<Contacto> contactos = new ArrayList<>();
 
 	public static void main(String[] args) {
+		//Contactos dummy
+		contactos.add(new Contacto("Sarina", "Bolaños", "51130327"));
+		contactos.add(new Contacto("Esvin", "González", "51233905"));
+		contactos.add(new Contacto("Lenix", "González", "47331010"));
+		contactos.add(new Contacto("Josué", "Lima", "43890987"));
+		contactos.add(new Contacto("Lester", "Segura", "51190327"));
+
 		int opcion;
 		do {
 			System.out.println("+-------- Gestor de contactos --------+");
@@ -27,7 +34,7 @@ public class GestorContactos {
 					//eliminarContacto();
 					break;
 				case 3:
-					//mostrarTodos();
+					mostrarTodos();
 					break;
 				case 4:
 					//mostrarFiltrados();
@@ -66,7 +73,9 @@ public class GestorContactos {
 
 	private static void eliminarContacto() {}
 
-	private static void mostrarTodos() {}
+	private static void mostrarTodos() {
+		contactos.forEach(System.out::println);
+	}
 
 	private static void mostrarFiltrados() {}
 
