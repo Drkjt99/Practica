@@ -8,8 +8,6 @@ public class GestorContactos {
 	public static void main(String[] args) {
 		int opcion;
 		do {
-			System.out.print("\033[H\033[2J");
-			System.out.flush();
 			System.out.println("+-------- Gestor de contactos --------+");
 			System.out.println("|                                     |");
 			System.out.println("| Seleccione una opción:              |");
@@ -23,7 +21,7 @@ public class GestorContactos {
 			opcion = scan.nextInt();
 			switch (opcion) {
 				case 1:
-					//crearContacto();
+					crearContacto();
 					break;
 				case 2:
 					//eliminarContacto();
@@ -43,7 +41,28 @@ public class GestorContactos {
 		} while(opcion != 0);
 	}
 
-	private static void crearContacto() {}
+	private static void crearContacto() {
+		Contacto contacto = new Contacto();
+
+		System.out.println("Ingrese el nombre");
+		String nombre = scan.nextLine();
+		contacto.setNombre(nombre);
+
+		System.out.println("Ingrese el apellido");
+		String apellido = scan.nextLine();
+		contacto.setApellido(apellido);
+
+		System.out.println("Ingrese la fecha de nacimiento");
+		String fechaNacimiento = scan.nextLine();
+		contacto.setFechaNacimiento(fechaNacimiento);
+
+		System.out.println("Ingrese el telefono");
+		String telefono = scan.nextLine();
+		contacto.setTelefono(telefono);
+
+		contactos.add(contacto);
+		System.out.println("Contacto ingresado exitosamente");
+	}
 
 	private static void eliminarContacto() {}
 
