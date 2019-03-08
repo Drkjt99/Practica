@@ -4,7 +4,6 @@ public class Contacto {
 	private String apellido;
 	private String fechaNacimiento;
 	private String telefono;
-
 	public Contacto() {
 	}
 
@@ -50,5 +49,4 @@ public class Contacto {
 	public String toString() {
 		return this.nombre + " - " + this.apellido + " - " + this.telefono;
 	}
-
 }
